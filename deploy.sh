@@ -19,7 +19,7 @@ echo 'www.dimples.top' > CNAME  # 自定义域名
 if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
   codingUrl=git@e.coding.net:Dimples_Yj/vuepress_blog/vuepree_blog.git
 else
-  codingUrl=https://dimples_yj:${CODING_TOKEN}@e.coding.net/Dimples_Yj/vuepress_blog/vuepree_blog.git
+  codingUrl=https://ptmmdvt1fchf:${CODING_TOKEN}@e.coding.net/Dimples_Yj/vuepress_blog/vuepree_blog.git
 fi
 
 msg='deploy'
