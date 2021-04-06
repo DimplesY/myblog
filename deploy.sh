@@ -9,6 +9,8 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+git config --global user.name "Dimples_Yj"
+git config --global user.email "2890841438@qq.com"
 
 # deploy to coding
 echo 'www.dimples.top' > CNAME  # 自定义域名
@@ -18,9 +20,6 @@ if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_T
 else
   codingUrl=https://Dimples_Yj:${CODING_TOKEN}@e.coding.net/vuepress_blog/vuepree_blog.git
 fi
-
-git config --global user.name "Dimples_Yj"
-git config --global user.email "2890841438@qq.com
 
 git add -A
 git commit -m "${msg}"
