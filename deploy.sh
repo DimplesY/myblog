@@ -18,6 +18,10 @@ if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_T
 else
   codingUrl=https://Dimples_Yj:${CODING_TOKEN}@e.coding.net/vuepress_blog/vuepree_blog.git
 fi
+
+git config --global user.name "Dimples_Yj"
+git config --global user.email "2890841438@qq.com
+
 git add -A
 git commit -m "${msg}"
 git push -f $codingUrl master # 推送到coding
