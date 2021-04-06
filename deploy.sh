@@ -1,17 +1,26 @@
+#!/usr/bin/env sh
+
 # 确保脚本抛出遇到的错误
 set -e
 
 # 生成静态文件
-yarn build
+npm run build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# 如果是发布到自定义域名
-# echo 'www.example.com' > CNAME
 
-git init
+# deploy to coding
+echo 'www.dimples.top' > CNAME  # 自定义域名
+
+if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
+  codingUrl=git@e.coding.net:Dimples_Yj/vuepress_blog/vuepree_blog.git
+else
+  codingUrl=https://Dimples_Yj:${CODING_TOKEN}@e.coding.net/vuepress_blog/vuepree_blog.git
+fi
 git add -A
-git commit -m 'deploy'
+git commit -m "${msg}"
+git push -f $codingUrl master # 推送到coding
 
-git push -f git@e.coding.net:Dimples_Yj/vuepress_blog/vuepree_blog.git master
+cd - # 退回开始所在目录
+rm -rf docs/.vuepress/dist
