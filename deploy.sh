@@ -22,6 +22,8 @@ else
   codingUrl=https://Dimples_Yj:${CODING_TOKEN}@e.coding.net/vuepress_blog/vuepree_blog.git
 fi
 
+msg='deploy'
+
 git add -A
 git commit -m "${msg}"
 git push -f $codingUrl master # 推送到coding
