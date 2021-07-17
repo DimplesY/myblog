@@ -71,7 +71,7 @@ module.exports = {
 
     author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
       name: 'Dimples', // 必需
-      link: 'https://github.com/2890841438' // 可选的
+      link: 'https://github.com/DimplesY' // 可选的
     },
     blogger: { // 博主信息，显示在首页侧边栏
       avatar: 'https://gitee.com/Dimples_Yj/my-img/raw/master/img/QQ%E5%9B%BE%E7%89%8720201025032558.jpg',
@@ -89,7 +89,7 @@ module.exports = {
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/2890841438'
+          link: 'https://github.com/DimplesY'
         },
         {
           iconClass: 'icon-erji',
@@ -185,8 +185,8 @@ module.exports = {
           clientID: 'b470be692ef3535b507e',
           clientSecret: '88090371b125b822635610d1d88245b0d6bea74a',
           repo: 'comment', // GitHub 仓库
-          owner: '2890841438', // GitHub仓库所有者
-          admin: ['2890841438'], // 对仓库有写权限的人
+          owner: 'DimplesY', // GitHub仓库所有者
+          admin: ['DimplesY'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
