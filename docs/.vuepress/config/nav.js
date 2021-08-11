@@ -28,9 +28,11 @@ module.exports = [
     link: '/backend/',
     items: [
       { text: 'Java', link: '/pages/36b96c/' },
-      { text: 'Python', link: '/pages/da9255/' },
+      { text: 'Python', link: '/pages/8964ae/' },
+	  { text: 'Go', link: '/pages/da9255/' },
       { text: '数据库', link: '/pages/16ab31/' },
       { text: 'SpringCloud', link: '/pages/f299ef/' },
+	  
     ]
   },
   {
