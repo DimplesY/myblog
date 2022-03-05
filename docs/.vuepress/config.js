@@ -36,8 +36,9 @@ module.exports = {
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
+    docsBranch: 'main',
     editLinks: true, // 启用编辑
-    editLinkText: '编辑',
+    editLinkText: '帮助我修改此页面',
 
     //*** 以下配置是Vdoing主题改动和新增的配置 ***//
 
@@ -74,9 +75,9 @@ module.exports = {
       link: 'https://github.com/DimplesY' // 可选的
     },
     blogger: { // 博主信息，显示在首页侧边栏
-      avatar: 'https://gitee.com/Dimples_Yj/my-img/raw/master/img/QQ%E5%9B%BE%E7%89%8720201025032558.jpg',
+      avatar: 'https://gitee.com/Dimples_Yj/my-img/raw/master/img/QQ图片20200613022516.jpg',
       name: 'Dimples_Yj',
-      slogan: '全栈小学生'
+      slogan: '小全栈'
     },
     social: { // 社交图标，显示于博主信息栏和页脚栏
       // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
