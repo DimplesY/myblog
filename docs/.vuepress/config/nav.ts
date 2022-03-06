@@ -34,6 +34,7 @@ export default [
         text: "学习笔记",
         items: [
           { text: "《SpringBoot》笔记", link: "/note/springboot/" },
+          { text: "《Django》笔记", link: "/note/django/" },
           { text: "《Docker》笔记", link: "/note/docker/" },
         ],
       },
@@ -45,7 +46,7 @@ export default [
     text: "技术",
     link: "/technology/",
     items: [
-      { text: "面试", link: "/pages/d569d0/" },
+      // { text: "面试", link: "/pages/d569d0/" },
       { text: "分享", link: "/pages/524963/" },
     ],
   },
