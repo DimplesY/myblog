@@ -75,7 +75,7 @@ module.exports = {
       link: 'https://github.com/DimplesY' // 可选的
     },
     blogger: { // 博主信息，显示在首页侧边栏
-      avatar: 'https://gitee.com/Dimples_Yj/my-img/raw/master/img/QQ图片20200613022516.jpg',
+      avatar: 'https://dimples-yanjie.oss-cn-beijing.aliyuncs.com/blog/img/QQ图片20200613022516.jpg',
       name: 'Dimples_Yj',
       slogan: '小全栈'
     },

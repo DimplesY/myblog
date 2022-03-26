@@ -72,9 +72,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       link: 'https://github.com/DimplesY' // 可选的
     },
     blogger: { // 博主信息，显示在首页侧边栏
-      avatar: 'https://gitee.com/Dimples_Yj/my-img/raw/master/img/QQ图片20200613022516.jpg',
+      avatar: 'https://dimples-yanjie.oss-cn-beijing.aliyuncs.com/blog/img/QQ%E5%9B%BE%E7%89%8720200613022516.jpg',
       name: 'Dimples_Yj',
-      slogan: '小全栈'
+      slogan: '全栈开发者'
     },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
