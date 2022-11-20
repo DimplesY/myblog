@@ -11,10 +11,9 @@
       <div class="catalogue-title">目录</div>
       <div class="catalogue-content">
         <template v-for="(item, index) in getCatalogueList()">
-          <dl v-if="type(item) === 'array'" :key="index" class="inline">
+          <dl v-if="type(item) === 'array'" :key="index" :class="{ inline: pageData.inline }">
             <dt>
-              <router-link :to="item[2]"
-                >{{ `${index + 1}. ${item[1]}` }}
+              <router-link :to="item[2]">{{ `${index + 1}. ${item[1]}` }}
                 <span class="title-tag" v-if="item[3]">
                   {{ item[3] }}
                 </span>
@@ -31,28 +30,19 @@
               <!-- 二级目录 -->
               <template v-for="(c, i) in item.children">
                 <template v-if="type(c) === 'array'">
-                  <router-link :to="c[2]" :key="i"
-                    >{{ `${index + 1}-${i + 1}. ${c[1]}` }}
+                  <router-link :to="c[2]" :key="i">{{ `${index + 1}-${i + 1}. ${c[1]}` }}
                     <span class="title-tag" v-if="c[3]">
                       {{ c[3] }}
                     </span>
                   </router-link>
                 </template>
                 <!-- 三级目录 -->
-                <div
-                  v-else-if="type(c) === 'object'"
-                  :key="i"
-                  class="sub-cat-wrap"
-                >
+                <div v-else-if="type(c) === 'object'" :key="i" class="sub-cat-wrap">
                   <div :id="(anchorText = c.title)" class="sub-title">
                     <a :href="`#${anchorText}`" class="header-anchor">#</a>
                     {{ `${index + 1}-${i + 1}. ${c.title}` }}
                   </div>
-                  <router-link
-                    v-for="(cc, ii) in c.children"
-                    :to="cc[2]"
-                    :key="`${index + 1}-${i + 1}-${ii + 1}`"
-                  >
+                  <router-link v-for="(cc, ii) in c.children" :to="cc[2]" :key="`${index + 1}-${i + 1}-${ii + 1}`">
                     {{ `${index + 1}-${i + 1}-${ii + 1}. ${cc[1]}` }}
                     <span class="title-tag" v-if="cc[3]">
                       {{ cc[3] }}
@@ -88,10 +78,12 @@ export default {
   methods: {
     getPageData() {
       const pageComponent = this.$frontmatter.pageComponent
+      console.log(this.$frontmatter.inline)
       if (pageComponent && pageComponent.data) {
         this.pageData = {
           ...pageComponent.data,
-          title: this.$frontmatter.title
+          title: this.$frontmatter.title,
+          inline: !!this.$frontmatter.inline
         }
       } else {
         console.error('请在front matter中设置pageComponent和pageComponent.data数据')
