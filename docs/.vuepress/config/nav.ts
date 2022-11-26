@@ -33,14 +33,13 @@ export default [
       {
         text: "学习笔记",
         items: [
+          { text: "《Rust》笔记", link: "/note/rust/" },
           { text: "《SpringBoot》笔记", link: "/note/springboot/" },
           { text: "《Django》笔记", link: "/note/django/" },
           { text: "《Docker》笔记", link: "/note/docker/" },
           { text: "《Python爬虫》笔记", link: "/note/spider/" },
         ],
       },
-      // { text: "SpringCloud", link: "/pages/f299ef/" },
-      // { text: "Go", link: "/pages/da9255/" },
     ],
   },
   {
